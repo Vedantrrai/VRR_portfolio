@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import {
   Mail,
   Github,
@@ -202,3 +202,4 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
+
