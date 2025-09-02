@@ -1,0 +1,205 @@
+import { useState } from "react";
+import { ExternalLink, Github } from "lucide-react";
+
+const ProjectsSection = () => {
+  const projects = [
+    {
+      title: "Prime Drink UI/UX",
+      description:
+        "A sleek UI/UX design for a beverage app with intuitive navigation and smooth interactions.",
+      techStack: ["Figma", "Adobe XD", "Wireframing", "Prototyping"],
+      video: "/videos/prime-demo.mp4",
+      category: "UI/UX Design",
+      figmaLink: "https://www.figma.com/design/SnDPoPA8m0vMFzrPDhVIYq/prime?node-id=0-1&p=f&t=x27cetJ5CgjeU8Ri-0",
+    },
+    {
+      title: "College Selection System",
+      description:
+        "A system that helps students select colleges based on preferences, eligibility, and ranking criteria. Automates the admission process and suggests optimal choices.",
+      techStack: ["Node.js", "Express", "MongoDB", "EJS", "JavaScript", "HTML", "CSS"],
+      image: "/images/college.png",
+      category: "Web Development",
+      githubLink: "https://github.com/Vedantrrai/COLLEGE-SELECTION-SYSTEM",
+    },
+    {
+      title: "AI Virtual Assistant JARVIS",
+      description:
+        "An advanced AI virtual assistant built in Python with voice/text interaction, smart automation, and real-time intelligence features including face & voice authentication, gesture control, and emotion detection.",
+      techStack: ["Python", "PyQt5", "Speech Recognition", "OpenAI API", "Groq API"],
+      image: "/images/jarvis.png",
+      category: "AI / Automation",
+      githubLink: "https://github.com/Vedantrrai/AI-VIRTUAL-ASSISTANT-JARVIS-",
+    },
+    {
+      title: "Codemate UI/UX",
+      description:
+        "A collaborative coding platform designed with an intuitive user interface and seamless team workflows.",
+      techStack: ["Figma", "Wireframing", "User Flows", "Prototyping"],
+      image: "/images/codemate.png",
+      category: "UI/UX Design",
+      figmaLink: "https://www.figma.com/design/RxyBjO6OdaYMwSugyYq6Za/task-1?node-id=0-1&p=f&t=REZj96YtqpIV9Ck5-0",
+    },
+    {
+      title: "SkyVibe - Travel App UI",
+      description:
+        "Elegant travel application interface design with focus on discovery and booking experience for modern travelers.",
+      techStack: ["Figma", "User Research", "Design Systems"],
+      image: "/images/travel.png",
+      category: "UI/UX Design",
+      figmaLink: "https://www.figma.com/design/Uipx1JFRt4Fl9oWb0jOHW2/Travel-landing-page?node-id=1-5&t=tFa1cmX35AAn4kYi-0",
+    },
+    {
+      title: "MuscleForge - Fitness App",
+      description:
+        "Complete fitness application UI design with workout tracking, progress monitoring, and social features for fitness enthusiasts.",
+      techStack: ["Figma", "Mobile Design", "User Journey"],
+      image: "/images/gym.png",
+      category: "UI/UX Design",
+      figmaLink: "https://www.figma.com/design/tVJFYyRXzJyVj88J3ECyBi/GYM-Landing-Page?node-id=0-1&t=SBTwpkRCQRbYFyHH-0",
+    },
+    {
+      title: "SoleCraft - Shoe Store UI",
+      description:
+        "Modern and intuitive UI/UX design for a premium shoe store, focusing on user experience and conversion optimization.",
+      techStack: ["Figma", "UI/UX Design", "Prototyping"],
+      image: "/images/shoes.png",
+      category: "UI/UX Design",
+      figmaLink: "https://www.figma.com/design/H5JHjhWAeeR4hu1RrMRmyg/Shoes-Landing-Page?node-id=14-486&t=EhpzM4vomfYXNKqn-0",
+    }
+  ];
+
+  const [showAll, setShowAll] = useState(false);
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case "Web Development":
+        return "bg-blue-500/10 text-blue-400 border-blue-500/20";
+      case "AI / Automation":
+        return "bg-green-500/10 text-green-400 border-green-500/20";
+      case "UI/UX Design":
+        return "bg-purple-500/10 text-purple-400 border-purple-500/20";
+      default:
+        return "bg-primary/10 text-primary border-primary/20";
+    }
+  };
+
+  const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
+  return (
+    <section id="projects" className="py-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold font-playfair mb-4">
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h2>
+          <p className="text-xl text-muted-foreground">
+            A showcase of my recent work and creative projects
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {displayedProjects.map((project, index) => (
+            <div
+              key={index}
+              className="project-card bg-gradient-card p-6 rounded-xl border border-border/50 fade-in fade-in-delay-1 group"
+            >
+              {/* Project Image / Video */}
+              <div className="mb-6 rounded-lg overflow-hidden">
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    className="h-56 w-full object-cover rounded-md"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                  />
+                ) : project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-56 object-cover rounded-md shadow-md"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-56 bg-primary/10 text-7xl rounded-md">
+                    ?
+                  </div>
+                )}
+              </div>
+
+              {/* Category Badge */}
+              <span
+                className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ${getCategoryColor(
+                  project.category
+                )}`}
+              >
+                {project.category}
+              </span>
+
+              {/* Project Title */}
+              <h3 className="font-bold text-xl mb-3 text-card-foreground">
+                {project.title}
+              </h3>
+
+              {/* Project Description */}
+              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                {project.description}
+              </p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.techStack.map((tech, techIndex) => (
+                  <span
+                    key={techIndex}
+                    className="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md border border-primary/20"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Links */}
+              <div className="flex gap-4 justify-center flex-wrap">
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-1 border border-primary/20 text-primary text-sm rounded-md hover:bg-primary/10 transition-colors"
+                  >
+                    <Github className="w-4 h-4 mr-2" /> GitHub
+                  </a>
+                )}
+                {project.figmaLink && (
+                  <a
+                    href={project.figmaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-3 py-1 border border-purple-400/20 text-purple-400 text-sm rounded-md hover:bg-purple-500/10 transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" /> Figma
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Load More Button */}
+        <div className="text-center mt-12">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="px-6 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition-colors"
+          >
+            {showAll ? "Show Less" : "Load More"}
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
