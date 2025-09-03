@@ -52,7 +52,7 @@ const Navbar = () => {
                       transition-all duration-300">
 
         {/* Logo / Name (optional) */}
-        <span className="font-bold text-lg text-gray-800 dark:text-gray-200">VRR</span>
+        
 
         {/* Desktop Nav */}
         <ul className="hidden md:flex gap-6 relative">
@@ -127,3 +127,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
