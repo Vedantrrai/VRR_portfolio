@@ -1,51 +1,61 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Instagram, Twitter, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const socialLinks = [
     {
-      name: 'LinkedIn',
+      name: "LinkedIn",
       icon: <Linkedin size={20} />,
-      href: 'https://linkedin.com',
-      color: 'hover:text-blue-400'
+      href: "https://linkedin.com/in/vedantrrai7",
+      color: "hover:text-blue-400",
     },
     {
-      name: 'GitHub',
+      name: "GitHub",
       icon: <Github size={20} />,
-      href: 'https://github.com',
-      color: 'hover:text-gray-400'
+      href: "https://github.com/vedantrrai",
+      color: "hover:text-gray-400",
     },
     {
-      name: 'Email',
-      icon: <Mail size={20} />,
-      href: 'mailto:vedant@example.com',
-      color: 'hover:text-red-400'
-    }
+      name: "Instagram",
+      icon: <Instagram size={20} />,
+      href: "https://instagram.com/vedantrrai",
+      color: "hover:text-pink-400",
+    },
+    {
+      name: "Twitter",
+      icon: <Twitter size={20} />,
+      href: "https://twitter.com/vedantrrai",
+      color: "hover:text-sky-400",
+    },
   ];
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="py-12 border-t border-border/50">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+    <footer className="py-10 border-t border-border/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
           {/* Logo/Name */}
-          <div className="flex items-center space-x-4">
-            <button
-              onClick={scrollToTop}
-              className="font-playfair font-bold text-2xl hover:text-primary transition-colors cursor-pointer"
-            >
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Vedant Rakesh Rai
-              </span>
-            </button>
-          </div>
+          <button
+            onClick={scrollToTop}
+            className="font-playfair font-bold text-xl sm:text-2xl hover:text-primary transition-colors cursor-pointer"
+          >
+           <span className="bg-gradient-primary bg-clip-text text-transparent">
+  Vedant{" "}
+  <span className="bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent font-semibold drop-shadow-md">
+    Rakesh
+  </span>{" "}
+  Rai
+</span>
+
+
+          </button>
 
           {/* Social Links */}
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap justify-center md:justify-end gap-4">
             {socialLinks.map((link, index) => (
               <a
                 key={index}
@@ -61,11 +71,12 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="text-center md:text-right">
-            <p className="text-muted-foreground flex items-center gap-1">
-              © {currentYear} Made with <Heart size={16} className="text-red-400" /> by Vedant
-            </p>
-          </div>
+          <p className="mt-1 text-xs sm:text-sm italic">
+    My strength, my guide, my inspiration -{" "}
+    <span className="font-semibold bg-gradient-to-r from-yellow-500 via-yellow-400 to-yellow-300 bg-clip-text text-transparent">
+      Dad
+    </span>
+  </p>
         </div>
       </div>
     </footer>
