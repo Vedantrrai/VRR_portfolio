@@ -10,13 +10,22 @@ const ProjectsSection = () => {
       techStack: ["Figma", "Adobe XD", "Wireframing", "Prototyping"],
       video: "/videos/prime-demo.mp4",
       category: "UI/UX Design",
-      figmaLink: "https://www.figma.com/design/SnDPoPA8m0vMFzrPDhVIYq/prime?node-id=0-1&p=f&t=x27cetJ5CgjeU8Ri-0",
+      figmaLink:
+        "https://www.figma.com/design/SnDPoPA8m0vMFzrPDhVIYq/prime?node-id=0-1&p=f&t=x27cetJ5CgjeU8Ri-0",
     },
     {
       title: "College Selection System",
       description:
         "A system that helps students select colleges based on preferences, eligibility, and ranking criteria. Automates the admission process and suggests optimal choices.",
-      techStack: ["Node.js", "Express", "MongoDB", "EJS", "JavaScript", "HTML", "CSS"],
+      techStack: [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "EJS",
+        "JavaScript",
+        "HTML",
+        "CSS",
+      ],
       image: "/images/college.png",
       category: "Web Development",
       githubLink: "https://github.com/Vedantrrai/COLLEGE-SELECTION-SYSTEM",
@@ -25,10 +34,17 @@ const ProjectsSection = () => {
       title: "AI Virtual Assistant JARVIS",
       description:
         "An advanced AI virtual assistant built in Python with voice/text interaction, smart automation, and real-time intelligence features including face & voice authentication, gesture control, and emotion detection.",
-      techStack: ["Python", "PyQt5", "Speech Recognition", "OpenAI API", "Groq API"],
+      techStack: [
+        "Python",
+        "PyQt5",
+        "Speech Recognition",
+        "OpenAI API",
+        "Groq API",
+      ],
       image: "/images/jarvis.png",
       category: "AI / Automation",
-      githubLink: "https://github.com/Vedantrrai/AI-VIRTUAL-ASSISTANT-JARVIS-",
+      githubLink:
+        "https://github.com/Vedantrrai/AI-VIRTUAL-ASSISTANT-JARVIS-",
     },
     {
       title: "Codemate UI/UX",
@@ -37,7 +53,8 @@ const ProjectsSection = () => {
       techStack: ["Figma", "Wireframing", "User Flows", "Prototyping"],
       image: "/images/codemate.png",
       category: "UI/UX Design",
-      figmaLink: "https://www.figma.com/design/RxyBjO6OdaYMwSugyYq6Za/task-1?node-id=0-1&p=f&t=REZj96YtqpIV9Ck5-0",
+      figmaLink:
+        "https://www.figma.com/design/RxyBjO6OdaYMwSugyYq6Za/task-1?node-id=0-1&p=f&t=REZj96YtqpIV9Ck5-0",
     },
     {
       title: "SkyVibe - Travel App UI",
@@ -46,7 +63,8 @@ const ProjectsSection = () => {
       techStack: ["Figma", "User Research", "Design Systems"],
       image: "/images/travel.png",
       category: "UI/UX Design",
-      figmaLink: "https://www.figma.com/design/Uipx1JFRt4Fl9oWb0jOHW2/Travel-landing-page?node-id=1-5&t=tFa1cmX35AAn4kYi-0",
+      figmaLink:
+        "https://www.figma.com/design/Uipx1JFRt4Fl9oWb0jOHW2/Travel-landing-page?node-id=1-5&t=tFa1cmX35AAn4kYi-0",
     },
     {
       title: "MuscleForge - Fitness App",
@@ -55,7 +73,8 @@ const ProjectsSection = () => {
       techStack: ["Figma", "Mobile Design", "User Journey"],
       image: "/images/gym.png",
       category: "UI/UX Design",
-      figmaLink: "https://www.figma.com/design/tVJFYyRXzJyVj88J3ECyBi/GYM-Landing-Page?node-id=0-1&t=SBTwpkRCQRbYFyHH-0",
+      figmaLink:
+        "https://www.figma.com/design/tVJFYyRXzJyVj88J3ECyBi/GYM-Landing-Page?node-id=0-1&t=SBTwpkRCQRbYFyHH-0",
     },
     {
       title: "SoleCraft - Shoe Store UI",
@@ -64,8 +83,9 @@ const ProjectsSection = () => {
       techStack: ["Figma", "UI/UX Design", "Prototyping"],
       image: "/images/shoes.png",
       category: "UI/UX Design",
-      figmaLink: "https://www.figma.com/design/H5JHjhWAeeR4hu1RrMRmyg/Shoes-Landing-Page?node-id=14-486&t=EhpzM4vomfYXNKqn-0",
-    }
+      figmaLink:
+        "https://www.figma.com/design/H5JHjhWAeeR4hu1RrMRmyg/Shoes-Landing-Page?node-id=14-486&t=EhpzM4vomfYXNKqn-0",
+    },
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -86,31 +106,31 @@ const ProjectsSection = () => {
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <section id="projects" className="py-20">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold font-playfair mb-4">
+    <section id="projects" className="py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-3 sm:mb-4">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             A showcase of my recent work and creative projects
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
           {displayedProjects.map((project, index) => (
             <div
               key={index}
-              className="project-card bg-gradient-card p-6 rounded-xl border border-border/50 fade-in fade-in-delay-1 group"
+              className="project-card bg-gradient-card p-5 sm:p-6 rounded-xl border border-border/50 fade-in fade-in-delay-1 group"
             >
               {/* Project Image / Video */}
-              <div className="mb-6 rounded-lg overflow-hidden">
+              <div className="mb-5 sm:mb-6 rounded-lg overflow-hidden">
                 {project.video ? (
                   <video
                     src={project.video}
-                    className="h-56 w-full object-cover rounded-md"
+                    className="w-full h-48 sm:h-56 object-cover rounded-md"
                     autoPlay
                     loop
                     muted
@@ -121,10 +141,10 @@ const ProjectsSection = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-56 object-cover rounded-md shadow-md"
+                    className="w-full h-auto max-h-56 object-cover rounded-md shadow-md"
                   />
                 ) : (
-                  <div className="flex items-center justify-center h-56 bg-primary/10 text-7xl rounded-md">
+                  <div className="flex items-center justify-center h-48 sm:h-56 bg-primary/10 text-6xl sm:text-7xl rounded-md">
                     ?
                   </div>
                 )}
@@ -132,7 +152,7 @@ const ProjectsSection = () => {
 
               {/* Category Badge */}
               <span
-                className={`inline-block px-3 py-1 rounded-full text-sm font-medium mb-4 ${getCategoryColor(
+                className={`inline-block px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-3 sm:mb-4 ${getCategoryColor(
                   project.category
                 )}`}
               >
@@ -140,17 +160,17 @@ const ProjectsSection = () => {
               </span>
 
               {/* Project Title */}
-              <h3 className="font-bold text-xl mb-3 text-card-foreground">
+              <h3 className="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-card-foreground">
                 {project.title}
               </h3>
 
               {/* Project Description */}
-              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
               </p>
 
               {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
                 {project.techStack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
@@ -162,13 +182,13 @@ const ProjectsSection = () => {
               </div>
 
               {/* Links */}
-              <div className="flex gap-4 justify-center flex-wrap">
+              <div className="flex flex-wrap gap-3 justify-center">
                 {project.githubLink && (
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1 border border-primary/20 text-primary text-sm rounded-md hover:bg-primary/10 transition-colors"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-3 py-2 border border-primary/20 text-primary text-sm rounded-md hover:bg-primary/10 transition-colors"
                   >
                     <Github className="w-4 h-4 mr-2" /> GitHub
                   </a>
@@ -178,7 +198,7 @@ const ProjectsSection = () => {
                     href={project.figmaLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-3 py-1 border border-purple-400/20 text-purple-400 text-sm rounded-md hover:bg-purple-500/10 transition-colors"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-3 py-2 border border-purple-400/20 text-purple-400 text-sm rounded-md hover:bg-purple-500/10 transition-colors"
                   >
                     <ExternalLink className="w-4 h-4 mr-2" /> Figma
                   </a>
@@ -189,10 +209,10 @@ const ProjectsSection = () => {
         </div>
 
         {/* Load More Button */}
-        <div className="text-center mt-12">
+        <div className="text-center mt-10 sm:mt-12">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="px-6 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition-colors"
+            className="px-6 py-2 w-full sm:w-auto bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition-colors"
           >
             {showAll ? "Show Less" : "Load More"}
           </button>
