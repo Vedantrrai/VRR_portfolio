@@ -8,13 +8,12 @@ const HeroSection = () => {
   const [displayText, setDisplayText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
-const roles = [
-  '<UI/UX & Frontend Dev/>',
-  '< Impact Maker />',
-  '< Hustle. Build. Repeat. />',
-  '< Code. Create. Conquer. />'
-];
-
+  const roles = [
+    '<UI/UX & Frontend Dev/>',
+    '< Impact Maker />',
+    '< Hustle. Build. Repeat. />',
+    '< Code. Create. Conquer. />'
+  ];
 
   useEffect(() => {
     const typeSpeed = 100;
@@ -45,23 +44,22 @@ const roles = [
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 sm:pt-24"
+      className="min-h-screen flex items-center justify-center pt-16 sm:pt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid gap-12 lg:gap-20 lg:grid-cols-2 items-center">
+        <div className="grid gap-10 lg:gap-20 lg:grid-cols-2 items-center">
           
           {/* Left Content */}
           <div className="text-center lg:text-left fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-playfair mb-6 leading-tight whitespace-nowrap">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-7xl font-bold font-playfair mb-6 leading-snug whitespace-nowrap">
               <span className="text-foreground">Vedant</span>{' '}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Rakesh Rai
               </span>
             </h1>
 
-
-            <div className="mb-6 sm:mb-8">
-              <div className="typewriter-container text-lg sm:text-2xl font-semibold">
+            <div className="mb-5 sm:mb-8">
+              <div className="typewriter-container text-base sm:text-xl md:text-2xl font-semibold">
                 <span className="typewriter-text text-primary">
                   {displayText}
                   <span className="typewriter-cursor">|</span>
@@ -69,17 +67,19 @@ const roles = [
               </div>
             </div>
 
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
-              Passionate about creating beautiful, functional digital experiences.
-              I combine creative design with technical expertise to bring ideas to life.
+            {/* Clean Intro Paragraph */}
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              Hi, I’m Vedant, a passionate tech enthusiast with a love for design and development. 
+              I enjoy solving problems, creating intuitive interfaces, and bringing ideas to life through code. 
+              Creativity, collaboration, and continuous learning drive my journey in tech.
             </p>
 
             <a href="/VRR_new_resume.pdf" download>
               <Button
-                className="glow-hover bg-gradient-primary text-primary-foreground font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg rounded-xl"
+                className="glow-hover bg-gradient-primary text-primary-foreground font-semibold px-5 sm:px-7 py-3 sm:py-5 text-sm sm:text-lg rounded-xl"
                 size="lg"
               >
-                <Download className="mr-2" size={20} />
+                <Download className="mr-2" size={18} />
                 Download Resume
               </Button>
             </a>
@@ -88,7 +88,7 @@ const roles = [
           {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end fade-in fade-in-delay-2">
             <div className="profile-glow">
-              <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden bg-gradient-card">
+              <div className="w-44 h-44 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden bg-gradient-card">
                 <img
                   src={profileImage}
                   alt="Vedant Rakesh Rai"
