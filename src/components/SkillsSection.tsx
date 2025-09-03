@@ -41,42 +41,49 @@ const getCategoryColor = (category: string) => {
   }
 };
 
-
-
-
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold font-playfair mb-4">
+    <section id="skills" className="py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair mb-3 sm:mb-4">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Skills
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Technologies and tools I work with
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className={`skill-card p-6 rounded-xl text-center border border-border/50 fade-in fade-in-delay-${(index % 3) + 1}`}
+              className={`skill-card p-4 sm:p-6 rounded-lg sm:rounded-xl text-center border border-border/50 fade-in fade-in-delay-${(index % 3) + 1}`}
             >
-              
-<div className="flex items-center justify-center mb-4 h-16 w-16 mx-auto rounded-full shadow-lg p-2 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600">
-  <img src={skill.logo} alt={skill.name} className="max-h-full max-w-full object-contain drop-shadow-md" />
-</div>
+              {/* Logo */}
+              <div className="flex items-center justify-center mb-3 sm:mb-4 h-12 w-12 sm:h-16 sm:w-16 mx-auto rounded-full shadow-lg p-2 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600">
+                <img
+                  src={skill.logo}
+                  alt={skill.name}
+                  className="max-h-full max-w-full object-contain drop-shadow-md"
+                />
+              </div>
 
-
-
-
-              <h3 className="font-bold text-lg mb-2 text-card-foreground">
+              {/* Skill Name */}
+              <h3 className="font-bold text-sm sm:text-lg mb-1 sm:mb-2 text-card-foreground">
                 {skill.name}
               </h3>
-              <span className={`text-sm px-3 py-1 rounded-full border ${getCategoryColor(skill.category)}`}>
+
+              {/* Category Badge */}
+              <span
+                className={`text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full border bg-gradient-to-r ${getCategoryColor(
+                  skill.category
+                )} text-white`}
+              >
                 {skill.category}
               </span>
             </div>
