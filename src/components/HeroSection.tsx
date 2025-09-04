@@ -47,15 +47,13 @@ const HeroSection = () => {
       className="min-h-screen flex items-center justify-center pt-16 sm:pt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid gap-10 lg:gap-20 lg:grid-cols-2 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center text-center lg:text-left">
           
           {/* Left Content */}
-          <div className="text-center lg:text-left fade-in">
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-7xl font-bold font-playfair mb-6 leading-snug whitespace-nowrap">
-              <span className="text-foreground">Vedant</span>{' '}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Rakesh Rai
-              </span>
+          <div className="fade-in">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-7xl font-bold font-playfair mb-6 leading-snug whitespace-nowrap"> 
+              <span className="text-foreground">Vedant</span>{' '} 
+              <span className="bg-gradient-primary bg-clip-text text-transparent"> Rakesh Rai </span> 
             </h1>
 
             <div className="mb-5 sm:mb-8">
@@ -67,7 +65,6 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Clean Intro Paragraph */}
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               Hi, I’m Vedant, a passionate tech enthusiast with a love for design and development. 
               I enjoy solving problems, creating intuitive interfaces, and bringing ideas to life through code. 
