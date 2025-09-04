@@ -8,16 +8,24 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true); // 👈 default to dark
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+
+    if (savedTheme) {
+      if (savedTheme === 'dark') {
+        setIsDark(true);
+        document.body.classList.add('dark');
+      } else {
+        setIsDark(false);
+        document.body.classList.remove('dark');
+      }
+    } else {
+      // 👇 If no saved theme, default to dark
       setIsDark(true);
       document.body.classList.add('dark');
-    } else {
-      setIsDark(false);
-      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'dark');
     }
   }, []);
 
