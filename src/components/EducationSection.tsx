@@ -29,6 +29,19 @@ const educationData = [
 
 const experienceData = [
   {
+    icon: "🎨",
+    title: "UI Designer Intern",
+    subtitle: "Karpuragaurai Technologies Pvt. Ltd.",
+    period: "Sept 2025 – Dec 2025",
+    points: [
+      "Designed product landing pages for multiple surveillance-based solutions.",
+      "Created wireframes, prototypes, and UI flows aligned with business requirements.",
+      "Collaborated with product and engineering teams to refine user journeys.",
+      "Worked on research and documentation to support new UI features."
+    ],
+    tags: ["Figma", "Design Systems", "Wireframing", "UI/UX"]
+  },
+  {
     icon: "🖥️",
     title: "Frontend Developer Intern",
     subtitle: "Compozent Technologies",
@@ -40,18 +53,8 @@ const experienceData = [
     ],
     tags: ["HTML", "CSS", "JavaScript", "React"],
   },
-  {
-    icon: "💡",
-    title: "Research Intern",
-    subtitle: "SLRTCE, Mumbai",
-    period: "Jan 2025",
-    points: [
-      "Conducted UI/UX research on user flows and design efficiency.",
-      "Analyzed usability case studies and documented insights.",
-    ],
-    tags: ["Figma", "User Research", "Prototyping"],
-  },
 ];
+
 
 const EducationExperienceSection = () => {
   return (
@@ -161,3 +164,4 @@ const EducationExperienceSection = () => {
 };
 
 export default EducationExperienceSection;
+
