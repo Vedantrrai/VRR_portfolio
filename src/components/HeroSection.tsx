@@ -89,7 +89,7 @@ const HeroSection = () => {
                 <img
                   src={profileImage}
                   alt="Vedant Rakesh Rai"
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover object-top rounded-full" 
                 />
               </div>
             </div>
@@ -102,4 +102,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
