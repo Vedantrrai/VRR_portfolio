@@ -82,18 +82,18 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Right Content - Profile Image */}
           <div className="flex justify-center lg:justify-end fade-in fade-in-delay-2">
-            <div className="profile-glow">
-              <div className="w-44 h-44 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden bg-gradient-card">
-                <img
-                  src={profileImage}
-                  alt="Vedant Rakesh Rai"
-                  className="w-full h-full object-cover object-[50%_15%] rounded-full"
-                />
-              </div>
-            </div>
-          </div>
+  <div className="profile-glow">
+    <div className="w-44 h-44 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-[400px] lg:h-[400px] rounded-full overflow-hidden bg-gradient-card">
+      <img
+        src={profileImage}
+        alt="Vedant Rakesh Rai"
+        // Update the className below:
+        className="w-full h-full object-cover object-[50%_0%] scale-110 rounded-full"
+      />
+    </div>
+  </div>
+</div>
 
         </div>
       </div>
@@ -102,6 +102,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
 
 
